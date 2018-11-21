@@ -17,6 +17,9 @@ This SDK provides a drop-in set of screens and tools for Android applications to
 
 \* Note: the SDK is only responsible for capturing and uploading photos/videos. You still need to access the [Ondato API](https://documentation.ondato.com/) to create and manage checks.
 
+## Important note
+
+We recommend you to lock your app to a portrait orientation.
 
 ## Getting started
 
