@@ -84,11 +84,12 @@ Ondato ondato = Ondato.Companion.getInstance();
 
 ### 3. Creating the SDK configuration
 
-Create an `OndatoConfig` using your username, along with the password, choose mode of :"TEST" and "LIVE" environment, default mode is TEST.
+Create an `OndatoConfig` using your username, along with the password, choose mode of :"TEST" and "LIVE" environment, default mode is TEST. Also you can initialize SDK with token.
 
 ``` java
 final OndatoConfig config = new OndatoConfig.Builder()
-            .loginWith("username","password")
+            .loginWith("username","password") //just in Kotlin, not able to use in JAVA. 
+            .loginWith("username","password","token")// Must pass token parameter in JAVA, token can be null.
             .withMode(OndatoConfig.Mode.TEST)
             .build();
 ```
