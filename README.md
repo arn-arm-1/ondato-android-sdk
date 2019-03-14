@@ -46,7 +46,19 @@ repositories {
    jcenter()
    google()
 }
+```
 
+```app-gradle
+repositories {
+   jcenter()
+   google()
+}
+
+repositories {
+    maven {
+        url 'http://maven.facetec.com'
+    }
+}
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar', '*.aar'])
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
@@ -60,7 +72,7 @@ dependencies {
     implementation  'com.squareup.retrofit2:converter-scalars:2.1.0'
     api 'com.squareup.okhttp3:okhttp:3.10.0'
     testImplementation 'junit:junit:4.12'
-
+    implementation 'com.facetec:zoom-authentication-hybrid:7.0.8'
     implementation 'com.otaliastudios:cameraview:1.6.0'
 }
 ```
@@ -120,39 +132,7 @@ Congratulations! You have successfully started the flow. Carry on reading the ne
 
 ## Customising SDK
 
-### 1. Capture type customisation
-
-You can customise the capture type of the SDK via the `withCaptureType(Int)` method. You can do it in two different ways: Capturing user face by taking photo or a live video by using the front camera.
-
-``` java
-
-final Ondato config = OndatoConfig.builder()
-    .withCaptureType(OndatoConfig.CAPTURE_TYPE_VIDEO) // OndatoConfig.CAPTURE_TYPE_PHOTO
-    .loginWith("username","password")
-    .build();
-
-```
-
-### Document Capture Step
-In this step the user can pick which type of document to capture, and then use the phone camera to capture it.
-
-You can also specify a particular document type that the user is allowed to upload by replacing this step with a `CaptureScreenStep` containing the desired type:
-
-``` java
-
-OndatoConfig.DOCUMENT_TYPE_ID_CARD
-OndatoConfig.DOCUMENT_TYPE_PASSPORT
-
-final Ondato config = OndatoConfig.builder()
-    .withDocumentTypes(OndatoConfig.DOCUMENT_TYPE_PASSPORT, OndatoConfig.DOCUMENT_TYPE_ID_CARD)
-    .loginWith("username","password")
-    .build();
-
-```
-
-This way, the document type and country selection screens will not be visible prior to capturing the document.
-
-#### Splash Screen Step
+### 1. Splash Screen Step
 This screen is used to load data from server. Logo can be changed with the following parameter:`withSplashScreenLogo(R.drawable.res : Int)`
 
 
