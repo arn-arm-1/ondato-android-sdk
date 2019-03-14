@@ -24,11 +24,11 @@ We recommend you to lock your app to a portrait orientation.
 ## Getting started
 
 
-The SDK supports API level 17 and above ([distribution stats](https://developer.android.com/about/dashboards/index.html)).
+The SDK supports API level 18 and above ([distribution stats](https://developer.android.com/about/dashboards/index.html)).
 
 Our configuration is currently set to the following:
 
-- `minSdkVersion = 17`
+- `minSdkVersion = 18`
 - `compileSdkVersion = 27`
 - `targetSdkVersion = 27`
 - `Android Support Library = 27.1.1`
