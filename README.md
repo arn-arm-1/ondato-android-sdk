@@ -156,7 +156,43 @@ In order to enhance the user experience on the transition between your applicati
 
 `ondatoColorErrorText`: Defines the background color of the error message text color
 
-### 3. Localisation
+### 3. Flow
+`OndatoViewCreator` provide some optional methods to replace Ondato windows with custom ones: 
+``` java
+.withViewCreator(object: OndatoViewCreator {
+    override fun createInitialFragment(): Fragment {
+        return InitialFragment()
+    }
+    override fun createLoadingFragment(): Fragment {
+        return LoadingFragment()
+    }
+    override fun createTypeSelectionFragment(): Fragment {
+        return TypeSelectionFragment()
+    }
+})
+.withShowSuccess(true) // you can show or hide success layout
+```
+
+InitialFragment should contain 
+`(activity as? OndatoFlowController).start() // start the flow`
+
+TypeSelectionFragment should contain
+`(activity as? OndatoFlowController).onDocumentTypeSelected(DocumentType.PASSPORT) // pass document type enum`
+
+OndatoFlowController can change language with 
+`(activity as OndatoFlowController).changeLanguage(Languages.Lithuanian) // pass language enum`
+
+After language change identification process restart.
+
+Every fragment must have
+
+`
+android:background="@color/your_color" 
+android:clickable="true" 
+android:focusable="true"
+`
+
+### 4. Localisation
 
 Ondato Android SDK already comes with out-of-the-box translations for the following locales:
 - English (en) :uk:
