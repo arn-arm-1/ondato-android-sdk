@@ -156,12 +156,14 @@ In order to enhance the user experience on the transition between your applicati
 
 `ondatoColorErrorText`: Defines the background color of the error message text color
 
+`ondatoColorPrimaryDark`: Defines the taskbar color
+
 ### 3. Flow
 `OndatoViewCreator` provide some optional methods to replace Ondato windows with custom ones: 
 ``` java
 .withViewCreator(object: OndatoViewCreator {
     override fun createInitialFragment(): Fragment {
-        return InitialFragment()
+        return InitialFragment() //it can return null, if null is returned, start layout is not shown
     }
     override fun createLoadingFragment(): Fragment {
         return LoadingFragment()
@@ -171,6 +173,8 @@ In order to enhance the user experience on the transition between your applicati
     }
 })
 .withShowSuccess(true) // you can show or hide success layout
+.withLanguage(Languages.Lithuanian) // set app language, need to pass enum
+.withShowDefaultSplash(showSplash: Boolean) // boolean value set splash screen visibility
 ```
 
 InitialFragment should contain 
