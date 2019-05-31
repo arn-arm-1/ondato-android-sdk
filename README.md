@@ -158,6 +158,8 @@ In order to enhance the user experience on the transition between your applicati
 
 `ondatoColorPrimaryDark`: Defines the taskbar color
 
+`ondatoColorBackground`: Defines the background of the Main activity
+
 ### 3. Flow
 `OndatoViewCreator` provide some optional methods to replace Ondato windows with custom ones: 
 ``` java
