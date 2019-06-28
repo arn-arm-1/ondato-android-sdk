@@ -164,7 +164,7 @@ In order to enhance the user experience on the transition between your applicati
 `OndatoViewCreator` provide some optional methods to replace Ondato windows with custom ones: 
 ``` java
 .withViewCreator(object: OndatoViewCreator {
-    override fun createInitialFragment(): Fragment {
+    override fun createInitialFragment(): Fragment? {
         return InitialFragment() //it can return null, if null is returned, start layout is not shown
     }
     override fun createLoadingFragment(): Fragment {
