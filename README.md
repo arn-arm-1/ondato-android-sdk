@@ -72,7 +72,7 @@ dependencies {
     implementation  'com.squareup.retrofit2:converter-scalars:2.1.0'
     api 'com.squareup.okhttp3:okhttp:3.10.0'
     testImplementation 'junit:junit:4.12'
-    implementation 'com.facetec:zoom-authentication-hybrid:7.0.8'
+    implementation 'com.facetec:zoom-authentication-hybrid:7.0.14'
     implementation 'com.otaliastudios:cameraview:1.6.0'
 }
 ```
