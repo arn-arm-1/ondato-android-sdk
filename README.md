@@ -84,7 +84,7 @@ To use the SDK, you need to obtain an instance of the client object:
 Kotlin 
 
 ``` kotlin
-Ondato ondato = Ondato.instance// or OndatoFactory().getInstance();
+Ondato ondato = Ondato.instance// or OndatoFactory().getInstance()
 ```
 
 Java
