@@ -31,7 +31,7 @@ Our configuration is currently set to the following:
 - `minSdkVersion = 18`
 - `compileSdkVersion = 28`
 - `targetSdkVersion = 28`
-- `Android Support Library = 27.1.1`
+- `Android Support Library = 28.0.0`
 - `Kotlin = 1.2+`
 
 ### 1. Adding the SDK dependency
