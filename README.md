@@ -29,8 +29,8 @@ The SDK supports API level 18 and above ([distribution stats](https://developer.
 Our configuration is currently set to the following:
 
 - `minSdkVersion = 18`
-- `compileSdkVersion = 27`
-- `targetSdkVersion = 27`
+- `compileSdkVersion = 28`
+- `targetSdkVersion = 28`
 - `Android Support Library = 27.1.1`
 - `Kotlin = 1.2+`
 
@@ -62,18 +62,22 @@ repositories {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar', '*.aar'])
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    implementation 'com.android.support:appcompat-v7:27.1.1'
-    implementation 'com.android.support:design:27.1.1'
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support:design:28.0.0'
     implementation 'com.android.support.constraint:constraint-layout:1.1.3'
-    implementation 'com.android.support:support-v4:27.1.1'
+    implementation 'com.android.support:support-v4:28.0.0'
 
-    implementation 'com.squareup.retrofit2:retrofit:2.1.0'
-    implementation 'com.squareup.retrofit2:converter-gson:2.1.0'
+    implementation 'com.squareup.retrofit2:retrofit:2.5.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.5.0'
     implementation  'com.squareup.retrofit2:converter-scalars:2.1.0'
-    api 'com.squareup.okhttp3:okhttp:3.10.0'
+    api 'com.squareup.okhttp3:okhttp:3.12.1'
+    api 'com.squareup.okhttp3:logging-interceptor:3.12.1'
     testImplementation 'junit:junit:4.12'
-    implementation 'com.facetec:zoom-authentication-hybrid:7.0.14'
+
     implementation 'com.otaliastudios:cameraview:1.6.0'
+    implementation 'com.facetec:zoom-authentication-hybrid:7.0.14'
+    implementation "com.github.bumptech.glide:glide:4.9.0"
+    kapt "com.github.bumptech.glide:compiler:4.9.0"
 }
 ```
 
