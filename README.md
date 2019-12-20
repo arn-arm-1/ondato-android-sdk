@@ -29,17 +29,13 @@ The SDK supports API level 18 and above ([distribution stats](https://developer.
 Our configuration is currently set to the following:
 
 - `minSdkVersion = 18`
-- `compileSdkVersion = 28`
-- `targetSdkVersion = 28`
-- `Android Support Library = 28.0.0`
+- `compileSdkVersion = 29`
+- `targetSdkVersion = 29`
 - `Kotlin = 1.2+`
 
 ### 1. Adding the SDK dependency
 
-Starting on version `4.2.0` you can integrate it:
-
-Download OndatoSDK.aar and move to /libs folder of your project
-
+Download Ondato.zip, extract and move files to /libs folder of your project
 
 ```gradle
 repositories {
@@ -60,22 +56,22 @@ repositories {
     }
 }
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar', '*.aar'])
+    implementation fileTree(dir: 'libs', include: ['*.aar'])
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    implementation 'com.android.support:appcompat-v7:28.0.0'
-    implementation 'com.android.support:design:28.0.0'
-    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
-    implementation 'com.android.support:support-v4:28.0.0'
+    implementation 'androidx.appcompat:appcompat:1.0.0'
+    implementation 'com.google.android.material:material:1.0.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
 
     implementation 'com.squareup.retrofit2:retrofit:2.5.0'
     implementation 'com.squareup.retrofit2:converter-gson:2.5.0'
-    implementation  'com.squareup.retrofit2:converter-scalars:2.1.0'
+    implementation 'com.squareup.retrofit2:converter-scalars:2.1.0'
     api 'com.squareup.okhttp3:okhttp:3.12.1'
-    api 'com.squareup.okhttp3:logging-interceptor:3.12.1'
-    testImplementation 'junit:junit:4.12'
 
+    testImplementation 'junit:junit:4.12'
+    
     implementation 'com.otaliastudios:cameraview:1.6.0'
-    implementation 'com.facetec:zoom-authentication-hybrid:7.0.14'
+
     implementation "com.github.bumptech.glide:glide:4.9.0"
     kapt "com.github.bumptech.glide:compiler:4.9.0"
 }
