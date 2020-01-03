@@ -58,10 +58,10 @@ repositories {
 
 android {
       compileOptions {
-                        sourceCompatibility 1.8
-                        targetCompatibility 1.8
-                  }
-            }
+            sourceCompatibility 1.8
+            targetCompatibility 1.8
+      }
+}
             
 dependencies {
    implementation fileTree(dir: 'libs', include: ['*.aar'])
