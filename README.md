@@ -55,25 +55,32 @@ repositories {
         url 'http://maven.facetec.com'
     }
 }
+
+android {
+      compileOptions {
+                        sourceCompatibility 1.8
+                        targetCompatibility 1.8
+                  }
+            }
+            
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.aar'])
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    implementation 'androidx.appcompat:appcompat:1.0.0'
-    implementation 'com.google.android.material:material:1.0.0'
-    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
-    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+   implementation fileTree(dir: 'libs', include: ['*.aar'])
 
-    implementation 'com.squareup.retrofit2:retrofit:2.5.0'
-    implementation 'com.squareup.retrofit2:converter-gson:2.5.0'
-    implementation 'com.squareup.retrofit2:converter-scalars:2.1.0'
-    api 'com.squareup.okhttp3:okhttp:3.12.1'
-
-    testImplementation 'junit:junit:4.12'
-    
-    implementation 'com.otaliastudios:cameraview:1.6.0'
-
-    implementation "com.github.bumptech.glide:glide:4.9.0"
-    kapt "com.github.bumptech.glide:compiler:4.9.0"
+   implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+   implementation 'androidx.appcompat:appcompat:1.1.0'
+   implementation 'com.google.android.material:material:1.0.0'
+   implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+   
+   implementation 'com.squareup.retrofit2:retrofit:2.7.0'
+   implementation 'com.squareup.retrofit2:converter-gson:2.7.0'
+   implementation 'com.squareup.retrofit2:converter-scalars:2.1.0'
+   api 'com.squareup.okhttp3:okhttp:4.2.2'
+   
+   testImplementation 'junit:junit:4.12'
+   
+   implementation 'com.otaliastudios:cameraview:1.6.0'
+   implementation "com.github.bumptech.glide:glide:4.10.0"
+   kapt "com.github.bumptech.glide:compiler:4.10.0"
 }
 ```
 
