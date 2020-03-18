@@ -108,8 +108,9 @@ Create an `OndatoConfig` using your username, along with the password, choose mo
 ``` java
 final OndatoConfig config = new OndatoConfig.Builder()
             .loginWith("username","password") //just in Kotlin, not able to use in JAVA. 
-            .loginWith("username","password","token")// Must pass token parameter in JAVA, token can be null.
+            .loginWith("username","password","token") // Must pass token parameter in JAVA, token can be null.
             .withMode(OndatoConfig.Mode.TEST)
+            .withCustomData(customData: Any?) // optionally pass an object as a customData parameter
             .build();
 ```
 
