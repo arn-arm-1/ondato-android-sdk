@@ -111,6 +111,8 @@ final OndatoConfig config = new OndatoConfig.Builder()
             .loginWith("username","password","token") // Must pass token parameter in JAVA, token can be null.
             .withMode(OndatoConfig.Mode.TEST)
             .withCustomData(customData: Any?) // optionally pass an object as a customData parameter
+            .withFrontendValidation(false) // optionally disable in app validations
+            .withIdentificationId("identificationId") // optionally provide identificationId value
             .build();
 ```
 
@@ -122,12 +124,12 @@ ondato.init(config);
 ondato.starIdentification(context, new Ondato.ResultListener(){
 
             @Override
-            public void onSuccess() {
+            public void onSuccess(identificationId: String?) {
 
             }
 
             @Override
-            public void onFailure() {
+            public void onFailure(identificationId: String?, error: OndatoError) {
 
             }
         });
