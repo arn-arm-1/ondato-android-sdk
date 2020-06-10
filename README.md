@@ -113,7 +113,6 @@ final OndatoConfig config = new OndatoConfig.Builder()
             .withMode(OndatoConfig.Mode.TEST)
             .withCustomData(customData: Any?) // optionally pass an object as a customData parameter
             .withFrontendValidation(false) // optionally disable in app validations
-            .withIdentificationId("identificationId") // optionally provide identificationId value
             .build();
 ```
 
@@ -134,6 +133,7 @@ ondato.starIdentification(context, new Ondato.ResultListener(){
 
             }
         });
+        
 ```
 
 Congratulations! You have successfully started the flow. Carry on reading the next sections to learn how to:
