@@ -133,7 +133,6 @@ ondato.starIdentification(context, new Ondato.ResultListener(){
 
             }
         });
-        
 ```
 
 Congratulations! You have successfully started the flow. Carry on reading the next sections to learn how to:
