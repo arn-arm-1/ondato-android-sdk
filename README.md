@@ -109,9 +109,8 @@ Create an `OndatoConfig` using your username, along with the password, choose mo
 final OndatoConfig config = new OndatoConfig.Builder()
             .loginWith(ACCESS_TOKEN)//Token must be with type (Bearer $bearerToken)
             .loginWith("username","password") //just in Kotlin, not able to use in JAVA. 
-            .loginWith("username","password","token") // Must pass token parameter in JAVA, token can be null.
+            .withIdentificationId = "identificationId" // optionally provide identificationId
             .withMode(OndatoConfig.Mode.TEST)
-            .withCustomData(customData: Any?) // optionally pass an object as a customData parameter
             .withFrontendValidation(false) // optionally disable in app validations
             .build();
 ```
