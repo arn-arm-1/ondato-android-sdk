@@ -172,7 +172,7 @@ In order to enhance the user experience on the transition between your applicati
 ### 3. Flow
 `OndatoViewCreator` provide some optional methods to replace Ondato windows with custom ones: 
 ``` java
-.withViewCreator(object: OndatoViewCreator {
+.withViewCreator(object: ViewCreator {
     override fun createInitialFragment(): Fragment? {
         return InitialFragment() //it can return null, if null is returned, start layout is not shown
     }
@@ -183,6 +183,7 @@ In order to enhance the user experience on the transition between your applicati
         return TypeSelectionFragment()
     }
 })
+.withShowInitialScreen(false) // you can show or hide initial layout
 .withShowSuccess(true) // you can show or hide success layout
 .withLanguage(Languages.Lithuanian) // set app language, need to pass enum
 .withShowDefaultSplash(showSplash: Boolean) // boolean value set splash screen visibility
