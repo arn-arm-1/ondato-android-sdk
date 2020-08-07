@@ -213,3 +213,4 @@ android:focusable="true"
 Ondato Android SDK already comes with out-of-the-box translations for the following locales:
 - English (en) :uk:
 - Lithuanian (lt) :lt:
+- German (de) :de:
