@@ -112,6 +112,8 @@ final OndatoConfig config = new OndatoConfig.Builder()
             .withIdentificationId("identificationId") // optionally provide identificationId
             .withMode(OndatoConfig.Mode.TEST)
             .withFrontendValidation(false) // optionally disable in app validations
+            .withSkipCaptureSelfie(true) // optionally disable capturing selfie + document
+            .withSkipLivenessTest(false) // optionally allow user to skip zoom verification after zoom error
             .build();
 ```
 
